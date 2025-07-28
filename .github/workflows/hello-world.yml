@@ -9,3 +9,13 @@ jobs:
 
     - name: print the hello world
       run: echo "Hello-World"
+  subcribe:
+   needs: hello-world
+   runs-on: ubuntu-latest
+   steps: 
+      - name: checkout the code
+        uses: actions/checkout@v2
+
+      - name: print the hello world
+        run: echo "Please subcribe my channel"
+  
